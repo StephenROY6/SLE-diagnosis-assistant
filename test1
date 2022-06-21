@@ -1,0 +1,4 @@
+#way1: 寫許多if判斷式 最後加總
+#way2: 各自建立function??
+#互動式畫面較佳(提供明確引導)，輸出Yes/No primarily based on...
+def 
