@@ -41,3 +41,30 @@ after 0627 meeting
 /此外，將答案蒐集以及資料處理清楚分隔也有助於版本維護或系統出現錯誤時，清楚地得知哪個區塊出現bug。
 (2)2-3、2-4的差異為: 2-3在問答時直接判斷、參照並產生trueweight；而2-4則預先在trueweight填入陽性時的分數，問答時可視情形修改(如陰性則改為0)、直接產生病患各症狀所得分數表，較無用到字典參照。
 /個人認為:　在分類較簡單的系統中(eg.症狀只有Y、N二分法)，無須特別運用字典參照，利用預先建立的陽性分數表，碰到陰性時再改為0反而容易許多； 當狀況較複雜時，使用預先設定的字典進行參照 則可能 比建立多個分數表方便。
+
+
+# SLE_DiagnosisAssistant___ClassificationAndSLEDAI
+(after 0704, 0711 meeting) contain Classification and SLEDAI；store ans, weight in 2-D nparray
+
+***延續SLE_2-2特色:** \
+1.防呆裝置：在問答時，titer若出現非正浮點數，則請使用者重填；condition問答時若出現非Y或N的字元，將回到loop上個問題，讓填入者在填一次(而非資料處理時請他重填)
+
+2.將前置作業、問答過程與後續資訊處理與運算分開處理，方便於未來診斷標準更新時，只須修改前面的資料(weight_array、condition_array)即可。 
+
+***此版新增特色:** \
+1.運用*numpy array(2-D Array)做為資料儲存、資訊處理主軸(結構大改版，不同於以往的dict + nested list)，方便未來以矩陣執行更快速且多元的運算、能有更多資料分析(eg.統計學、ML)套件
+
+2.增加問答過程中使用者可使用的功能(Y、N、None、B、F):使用者能跳至先前或後面的題目更改答案，如不想更改答案也可直接返回不須重新填答: 善用巢狀while loop，當輸入B(back)或F(forward)時，讓使用者知道自己正跳至別題檢查，並可更正答案，在每個domain填答完後自動呈現出目前答題情形；同時新增No information的項目，處理缺乏資訊的狀況，並在結果呈現時，讓使用者知道哪個domain_condition的檢測資訊遺漏(hint: 事先將其index儲存於變數ans_No_Information)。
+  
+3.更加注意2019 EULAR/ACR classification criteria of SLE 以及 SLEDAI-2K(30 Days).2010 文章中診斷指示的細節(eg.SLE classification requires at least one clinical criterion)，並實踐於此版程式中(eg.問答前詳細說明判定標準，了解後才可進入作答區；將分數最高的domain解讀為判定main determinant instead of main cause；
+呈現判讀結果後利用No_Information_Suggestion函數告知使用者資訊遺漏的欄位，告知其隱含意義；程式碼最後提供reference)
+
+4.將問答、資料處理的程序打包為function(以關鍵字命名)，使code呈現時更加簡潔明瞭，方便與共同開發者分享交流。(It seems that 個人使用numpy後發現其內建函數的用處，能減少資訊處理時自訂函數的麻煩)
+
+***未來展望:**
+
+1.目前在每個domain填答完後會自動呈現出目前答題情形，但其結構為2-D array，較占版面、對使用者而言可讀性較低；希望後續能改善為「作答時呈現出該題目的目前答案給使用者參考」
+
+2.2019 EULAR/ACR classification criteria of SLE 以及 SLEDAI-2K(30 Days).2010的症狀中只有約5項相同，且此兩份問卷的時間設定*似乎不太一樣(classification criteria of SLE只要出現過一次即可；而SLEDAI的評分標準是過去三十天內是否曾經出現某個症狀)；另外，這兩個程序個別的症狀判定標準不太一樣(即使名稱相同)。因此，個人決定全部重新問答一次，此部分作法是否恰當或有更好的執行方式待與老師、同學討論後修正。
+
+3.不確定目前的2-D array是否就是matrix，或可簡單地做轉換，希望對numpy matrix操作更熟悉後再做修正
