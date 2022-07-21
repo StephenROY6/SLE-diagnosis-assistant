@@ -1,6 +1,6 @@
 # 0621_SLE-diagnosis-assistant
-(一)目的：提供一個方便醫護人員(不限醫師，可以是專科護理師、甚至實習護理師)操作的程式碼，幫助建立使用者友善的系統性紅斑性狼瘡人機互動平台。
-(二)目前成果與功能：
+(一)目的：提供一個方便醫護人員(不限醫師，可以是專科護理師、甚至實習護理師)操作的程式碼，幫助建立使用者友善的系統性紅斑性狼瘡人機互動平台。\
+(二)目前成果與功能：\
   1.前置作業pre-dataprocessing：establish several dicts as reference table for various conditions in each domain
   2.問答介面：(1)依照domain分門別類，先呈現特定domain名稱讓填寫者明瞭，再依序提問該domain的子題讓填寫者輸入。
              (2)並將輸入結果分門別類放置於nested list中，方便後續一對一地轉換為分數以及結果分析。
