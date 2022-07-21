@@ -43,7 +43,7 @@ after 0627 meeting
 /個人認為:　在分類較簡單的系統中(eg.症狀只有Y、N二分法)，無須特別運用字典參照，利用預先建立的陽性分數表，碰到陰性時再改為0反而容易許多； 當狀況較複雜時，使用預先設定的字典進行參照 則可能 比建立多個分數表方便。
 
 
-# SLE_DiagnosisAssistant___ClassificationAndSLEDAI
+# 0711_SLE_DiagnosisAssistant___ClassificationAndSLEDAI
 (after 0704, 0711 meeting) contain Classification and SLEDAI；store ans, weight in 2-D nparray
 
 ***延續SLE_2-2特色:** \
