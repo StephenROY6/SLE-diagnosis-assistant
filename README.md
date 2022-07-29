@@ -68,3 +68,10 @@ after 0627 meeting
 2.2019 EULAR/ACR classification criteria of SLE 以及 SLEDAI-2K(30 Days).2010的症狀中只有約5項相同，且此兩份問卷的時間設定*似乎不太一樣(classification criteria of SLE只要出現過一次即可；而SLEDAI的評分標準是過去三十天內是否曾經出現某個症狀)；另外，這兩個程序個別的症狀判定標準不太一樣(即使名稱相同)。因此，個人決定全部重新問答一次，此部分作法是否恰當或有更好的執行方式待與老師、同學討論後修正。
 
 3.不確定目前的2-D array是否就是matrix，或可簡單地做轉換，希望對numpy matrix操作更熟悉後再做修正
+
+
+# 0727_SLEClassification&SLEDAI_for_users(NEWEST)
+**此版特點:**
+1.在初始介面先使用二分法確認使用者狀態(類似分類樹概念)\
+2.問答方式合理化: Proteinuria > 0.5g/24hr 讓使用者填數字 ； Renal Biopsy為選擇題(Class II or lll or IV or V只會有一個)\
+2.SLEDAI先不分類
