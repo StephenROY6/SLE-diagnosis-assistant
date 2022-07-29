@@ -71,7 +71,7 @@ after 0627 meeting
 
 
 # 0727_SLEClassification&SLEDAI_for_users(NEWEST)
-**此版特點:**
+**此版特點:**\
 1.在初始介面先使用二分法確認使用者狀態(類似分類樹概念)\
 2.問答方式合理化: Proteinuria > 0.5g/24hr 讓使用者填數字 ； Renal Biopsy為選擇題(Class II or lll or IV or V只會有一個)\
 2.SLEDAI先不分類
