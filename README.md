@@ -77,7 +77,7 @@ after 0627 meeting
 2.SLEDAI先不分類
 
 
-# 08__SLEClassification&SLEDAI_for_users(NEWEST)
+# 0821__SLEClassification&SLEDAI_for_users(NEWEST)
 **此版特點:**\
 1.輔助說明內容的簡化、程式碼的精簡(變數名稱)\
 2.當lupus nephritis選擇題輸入非規定的正整數時，雖然不會錯誤提醒，但也視同無效不會被計分；例外處理時，盡量讓電腦幫忙列出錯誤(eg.型態轉換不符)，其餘輸入型態正確但不合乎SLE臨床知識與邏輯等錯誤則盡量手動羅列。\
