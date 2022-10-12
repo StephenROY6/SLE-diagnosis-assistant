@@ -1,8 +1,8 @@
 # 1010_SLE_Diagnosis_Assistant_integtrated
-**整合結果：**
-1.輸入介面精簡
-2.ans confirm可一次修改多題
-3.病人資料的excel自動化
+**整合結果：**\
+1.輸入介面精簡\
+2.ans confirm可一次修改多題\
+3.病人資料的excel自動化\
 4.打包package使主程式精簡至80行內，並能順利運行
 
 # 0821__SLEClassification&SLEDAI_for_users(NEWEST)
