@@ -1,7 +1,7 @@
 # 1113_SLE_Diagnosis_Assistant_
 **新增功能:**
-1. 執行時可一次輸入多個病人\
-2. 詢問是否儲存，再整合在excel\
+1. 執行時可一次輸入多個病人
+2. 詢問是否儲存，再整合在excel
 3. 紀錄每位病人當下時間
 
 # 1010_SLE_Diagnosis_Assistant_integtrated
