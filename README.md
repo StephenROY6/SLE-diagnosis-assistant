@@ -2,9 +2,9 @@
 **新增功能:**
 1. 執行時可一次輸入多個病人
 2. 詢問是否儲存，再整合在excel
-3. 紀錄每位病人當下時間
+3. 紀錄每位病人當下時間\
 **套件原始碼:**
-詳見檔案 __init__.py、SLE.py(附註the latest edition)
+詳見檔案 __init__.py、SLE.py(附註the latest package)
 
 # 1010_SLE_Diagnosis_Assistant_integtrated
 **整合結果：**\
